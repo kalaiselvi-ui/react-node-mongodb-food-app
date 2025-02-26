@@ -11,7 +11,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 console.log("Stripe Secret Key:", process.env.STRIPE_SECRET_KEY);
 
 const placeOrder = async (req, res) => {
-  const frontend_url = "http://localhost:5173";
+  const frontend_url = "https://food-app-client-m4fo.onrender.com";
   try {
     const { userId, items, amount, address } = req.body;
 
