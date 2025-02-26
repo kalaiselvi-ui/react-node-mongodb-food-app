@@ -1,0 +1,35 @@
+.add{
+    width: 70%;
+    margin-left: max(5vw, 25px);
+    margin-top: 50px;
+    color: #6d6d6d;
+    font-size: 16px;
+
+   .add-img-upload{
+    width: 120px;
+   }
+   .add-product-name, .add-product-desc{
+    width: max(48%, 280px);
+
+    input, textarea{
+        padding: 10px;
+    }
+   }
+   .add-product-price{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    select, input{
+        max-width: 120px;
+        padding: 10px;
+    }
+   }
+   .add-button{
+    max-width: 120px;
+    border: none;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+   }
+}

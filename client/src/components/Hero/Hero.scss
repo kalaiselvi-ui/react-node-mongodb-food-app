@@ -1,0 +1,42 @@
+.hero-section{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeast;
+    position: relative;
+    height: 34vw;
+    margin: 30px auto;
+    
+    @media (max-width:1050px){
+        height: 38vw;
+    }
+    .hero-content{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 1.5vw;
+        max-width: 50%;
+        bottom: 10%;
+        left: 6vw;
+        animation: fadeIn 3s;
+        @media (max-width:1050px){
+            max-width: 45%;
+        }
+        @media (max-width:768px){
+            max-width: 55%;
+        }
+        h2{
+            font-weight: 500;
+            color: white;
+            font-size: max(4.5vw, 22px);
+        }
+        p{
+            color: white;
+            font-size: 1vw;
+
+            @media (max-width:768px){
+                display: none;
+            }
+        }
+    }
+   }

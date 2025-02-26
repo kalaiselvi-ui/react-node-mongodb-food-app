@@ -1,0 +1,133 @@
+.navbar{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: sticky;
+    z-index: 50;
+    top: 0;
+
+    .logo{
+        width: 150px;
+
+        @media(max-width: 1050px){
+            width: 140px;
+        }
+        @media(max-width: 768px){
+            width: 120px;
+        }
+    }
+    .navbar-menu{
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        color: #49557e;
+        font-size: 18px;
+        @media(max-width: 768px){
+            display: none;
+            font-size: 17px;
+        }
+
+        li{
+            cursor: pointer;
+
+            &:hover{
+                color: tomato;
+                border-bottom: 2px solid tomato;
+            }
+        }
+
+        .active{
+            color: tomato;
+            border-bottom: 2px solid tomato;
+        }
+    }
+    .navbar-right{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        
+        @media (max-width: 768px){
+            gap: 10px;
+        }
+        img{
+            @media (max-width: 768px){
+                width: 20px;
+            }  
+        }
+
+        button{
+            background-color: transparent;
+            font-size: 16px;
+            color: #49557e;
+            border: 1px solid tomato;
+            padding: 10px 30px;
+            border-radius: 50px;
+            transition: 0.3s ease;
+            cursor: pointer;
+            &:hover{
+                background-color: #fff4f2;
+            }
+            @media(max-width: 1050px){
+                padding: 8px 25px;
+            }
+            @media(max-width: 768px){
+                padding: 8px 20px;
+            }
+        }
+    }
+    .navbar-right{
+        .navbar-search-icon{
+             position: relative;
+            .dot{
+                position: absolute;
+                min-width: 20px;
+                min-height: 20px;
+                background-color: tomato;
+                border-radius: 50%;
+                top: -8px;
+                right: -8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+
+
+            }
+        }
+    }
+    .navbar-profile{
+        position: relative;
+        &:hover .nav-profile-dropdown{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #fff2ef;
+            padding: 12px 25px;
+            border-radius: 4px;
+            border: 1px solid tomato;
+            outline: 2px solid white;
+        }
+    }
+    .nav-profile-dropdown{
+        list-style: none;
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        display: none;
+        li{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            img{
+                width: 20px;
+            }
+            &:hover{
+                color: tomato;
+            }
+        }
+        
+    }
+}

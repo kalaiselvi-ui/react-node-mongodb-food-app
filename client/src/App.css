@@ -1,0 +1,12 @@
+.app{
+    width: 80%;
+    margin: auto;
+}
+
+@media(max-width: 968px){
+    .app{
+        width: 90%;
+        margin: auto;
+    }
+    
+}
