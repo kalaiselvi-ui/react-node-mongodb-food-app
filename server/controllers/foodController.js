@@ -72,6 +72,31 @@ const listFood = async (req, res) => {
   }
 };
 
+//edit food Item in admin
+
+const editFood = async (req, res) => {
+  try {
+    const { id, category } = req.body;
+    const updatedFood = await foodModel.findByIdAndUpdate(
+      id,
+      { category },
+      { new: true }
+    );
+    if (!updatedFood) {
+      return res.json({ success: false, message: "Food item not found" });
+    }
+
+    res.json({
+      success: true,
+      message: "Category updated successfully",
+      data: updatedFood,
+    });
+  } catch (err) {
+    console.error(err);
+    res.json({ success: false, message: "Error updating food item" });
+  }
+};
+
 //remove food item
 
 const removeFood = async (req, res) => {
@@ -91,4 +116,4 @@ const removeFood = async (req, res) => {
   }
 };
 
-export { addFood, listFood, removeFood };
+export { addFood, editFood, listFood, removeFood };
