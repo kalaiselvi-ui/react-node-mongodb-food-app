@@ -103,7 +103,7 @@ export const StoreContextProvider = (props) => {
         url,
         token,
         setToken
-    }), [cartItems, token, setToken])
+    }), [cartItems, token, setToken, food_list])
     return (
         <StoreContext.Provider value={contextValue}>
             {props.children}

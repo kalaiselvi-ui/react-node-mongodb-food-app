@@ -6,7 +6,7 @@ import './Navbar.scss';
 
 const Navbar = ({ setShowLogin }) => {
     const [menu, setMenu] = useState("home");
-    const { food_list, cartItems, getTotalItemCount, token, setToken } = useContext(StoreContext);
+    const { food_list, cartItems, setCartItems, getTotalItemCount, token, setToken } = useContext(StoreContext);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -16,6 +16,7 @@ const Navbar = ({ setShowLogin }) => {
     const Logout = () => {
         localStorage.removeItem("tokenfood");
         setToken("");
+        setCartItems({});
         navigate("/");
     }
 
